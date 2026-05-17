@@ -1,24 +1,24 @@
 name: Phrase Check Test
 
-# Trigger this test every time someone pushes code to the repository
+# Trigger this test every pushto repo
 on: [push]
 
 jobs:
   check-text:
     runs-on: ubuntu-latest
     steps:
-      # 1. Download the code from the repository onto the GitHub runner
+      # 1. Download the code from the repository to the GitHub runner
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. Run a terminal command (grep) to look for the phrase
-      - name: Search for the required phrase
+      # 2. Run a grep command to look for the phrase
+      - name: Search for the phrase
         run: |
           if grep -q "perovskites" *.txt; then
-            echo "🎉 Success: The required phrase was found!"
+            echo "🎉 Success!"
             exit 0
           else
-            echo "❌ Error: The phrase 'Hello World' is missing from sample.txt."
+            echo "❌ Error."
             exit 1
           fi
 
