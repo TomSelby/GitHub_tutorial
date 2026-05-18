@@ -3,4 +3,4 @@ this is some text
 
 I have made a change
 
-smc241 attended
+smc241 attended 2
