@@ -3,4 +3,5 @@ this is some text
 
 I have made a change
 
+smc241 attended 2
 kka32 has edited the attendance_list
